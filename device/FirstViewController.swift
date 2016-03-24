@@ -10,18 +10,34 @@ import Foundation
 import UIKit
 
 
+
 class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.createNavigationItem()
         self.createTableView()
+        self.addSVRefresh()
     }
-    var listArray = [["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"]]
+    func createNavigationItem(){
+        let rightButton1 = UIBarButtonItem(image: UIImage(named: "NearBy_unClick2"), style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let rightButton2 = UIBarButtonItem(image: UIImage(named: "NearBy_unClick2"), style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let buttonArray = [rightButton1,rightButton2]
+//        let items = UINavigationItem()
+//        items.rightBarButtonItems = buttonArray
+        //
+        let leftButton1 = UIBarButtonItem(title: "微信", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+//        items.leftBarButtonItem = leftButton1
+        //
+        self.navigationItem.rightBarButtonItems = buttonArray;
+        self.navigationItem.leftBarButtonItem = leftButton1;
+    }
     
+    var listArray = [["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"],["image":"MainPage_onClick2","title":"杨定甲","subTitle":"弄啥哩？还不来","time":"08:56"],["image":"My_onClick2","title":"刘尧","subTitle":"我到了","time":"昨天"]]
+    let tabelV:UITableView = UITableView()
     func createTableView(){
-        let tabelV:UITableView = UITableView()
         tabelV.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64-49)
         tabelV.delegate = self
         tabelV.dataSource = self
@@ -72,4 +88,28 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 54
     }
+    
+    func addSVRefresh(){
+        
+        tabelV.addPullToRefreshWithActionHandler({ () -> Void in
+            print("上")
+            self.upAction()
+            }, arrowView:UIImageView(image: UIImage(named:"icon_refresh_arrow_down")));
+        tabelV.addInfiniteScrollingWithActionHandler { () -> Void in
+            print("下")
+            self.downAction()
+        }
+    }
+    func upAction(){
+        
+        tabelV.pullToRefreshView.stopAnimating()
+        tabelV.infiniteScrollingView.stopAnimating()
+    }
+    func downAction(){
+        
+        tabelV.pullToRefreshView.stopAnimating()
+        tabelV.infiniteScrollingView.stopAnimating()
+    }
 }
+
+

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34025BB1CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = B34025B81CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.m */; };
+		B34025BC1CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = B34025BA1CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.m */; };
+		B34025C01CA3E1560005400F /* icon_refresh_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B34025BF1CA3E1560005400F /* icon_refresh_arrow_down@2x.png */; };
 		B346B2D11C993C2A00FBBB74 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346B2CF1C993C2A00FBBB74 /* MessageCell.swift */; };
 		B346B2D21C993C2A00FBBB74 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B346B2D01C993C2A00FBBB74 /* MessageCell.xib */; };
 		B383BF4A1C8FBE6F00908325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B383BF491C8FBE6F00908325 /* AppDelegate.swift */; };
@@ -71,6 +74,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B34025B61CA3D4210005400F /* PJSVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJSVPullToRefresh.h; sourceTree = "<group>"; };
+		B34025B71CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PJSVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		B34025B81CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PJSVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		B34025B91CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PJSVPullToRefresh.h"; sourceTree = "<group>"; };
+		B34025BA1CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PJSVPullToRefresh.m"; sourceTree = "<group>"; };
+		B34025BE1CA3D6260005400F /* hello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hello.h; sourceTree = "<group>"; };
+		B34025BF1CA3E1560005400F /* icon_refresh_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_refresh_arrow_down@2x.png"; sourceTree = "<group>"; };
 		B346B2CF1C993C2A00FBBB74 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		B346B2D01C993C2A00FBBB74 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		B383BF461C8FBE6F00908325 /* device.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = device.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +160,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B34025B51CA3D4210005400F /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				B34025B61CA3D4210005400F /* PJSVPullToRefresh.h */,
+				B34025B71CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.h */,
+				B34025B81CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.m */,
+				B34025B91CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.h */,
+				B34025BA1CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
 		B383BF3D1C8FBE6F00908325 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +195,7 @@
 		B383BF481C8FBE6F00908325 /* device */ = {
 			isa = PBXGroup;
 			children = (
+				B34025B51CA3D4210005400F /* SVPullToRefresh */,
 				B383E38A1C9810E4001AA298 /* ChineseSorting */,
 				B39429321C92BA6400FA2063 /* imageResource */,
 				B383BF491C8FBE6F00908325 /* AppDelegate.swift */,
@@ -185,6 +208,7 @@
 				B394084B1C96A84200EE838C /* FourthViewController.swift */,
 				B394084C1C96A84200EE838C /* FourthViewController.xib */,
 				B3A324391C9AB39000382DD3 /* SettingViewController.swift */,
+				B34025BE1CA3D6260005400F /* hello.h */,
 				B38801FA1C98FC3900C633B3 /* cell */,
 				B383BF4D1C8FBE6F00908325 /* Main.storyboard */,
 				B383BF501C8FBE6F00908325 /* Assets.xcassets */,
@@ -236,6 +260,7 @@
 		B39429321C92BA6400FA2063 /* imageResource */ = {
 			isa = PBXGroup;
 			children = (
+				B34025BF1CA3E1560005400F /* icon_refresh_arrow_down@2x.png */,
 				B383E33D1C97AF6F001AA298 /* head_test1.png */,
 				B383E33F1C97AFB1001AA298 /* head_test2.png */,
 				B394084F1C96AFD000EE838C /* mine_icon_ coupons@2x.png */,
@@ -373,6 +398,7 @@
 				B346B2D21C993C2A00FBBB74 /* MessageCell.xib in Resources */,
 				B39429501C92BA6400FA2063 /* NearBy_unClick@2x.png in Resources */,
 				B39408581C96AFD000EE838C /* mine_icon_focus@2x.png in Resources */,
+				B34025C01CA3E1560005400F /* icon_refresh_arrow_down@2x.png in Resources */,
 				B383E33E1C97AF6F001AA298 /* head_test1.png in Resources */,
 				B383BF541C8FBE6F00908325 /* LaunchScreen.storyboard in Resources */,
 				B39429481C92BA6400FA2063 /* MainPage_unClick2@2x.png in Resources */,
@@ -423,6 +449,7 @@
 			files = (
 				B346B2D11C993C2A00FBBB74 /* MessageCell.swift in Sources */,
 				B394292F1C92610B00FA2063 /* ForthViewController.swift in Sources */,
+				B34025BB1CA3D4210005400F /* UIScrollView+PJSVInfiniteScrolling.m in Sources */,
 				B38F75D51C9A3E500079B934 /* NewMessageCell.swift in Sources */,
 				B3A3243A1C9AB39000382DD3 /* SettingViewController.swift in Sources */,
 				B383E3901C9810E4001AA298 /* pinyin.c in Sources */,
@@ -430,6 +457,7 @@
 				B394084D1C96A84200EE838C /* FourthViewController.swift in Sources */,
 				B394292B1C9260E900FA2063 /* SecondViewController.swift in Sources */,
 				B39429291C9260DB00FA2063 /* FirstViewController.swift in Sources */,
+				B34025BC1CA3D4210005400F /* UIScrollView+PJSVPullToRefresh.m in Sources */,
 				B383E38F1C9810E4001AA298 /* ChineseString.m in Sources */,
 				B394292D1C9260F800FA2063 /* ThirdViewController.swift in Sources */,
 				B383BF4C1C8FBE6F00908325 /* ViewController.swift in Sources */,
@@ -578,6 +606,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mplus.iMobileSecondaryBuy.device;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/damai/Desktop/swift_try/device/hello.h;
 			};
 			name = Debug;
 		};
@@ -590,6 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mplus.iMobileSecondaryBuy.device;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/damai/Desktop/swift_try/device/hello.h;
 			};
 			name = Release;
 		};

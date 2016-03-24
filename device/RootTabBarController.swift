@@ -33,20 +33,39 @@ class RootTabBarController: UITabBarController {
         let item3:UITabBarItem = UITabBarItem(title: "发现", image: UIImage(named: "NearBy_unClick2"), selectedImage: UIImage(named:"NearBy_onClick2"))
         thirdVC.tabBarItem = item3
         
-//        let fourVC = ForthViewController()
-//        let nav4 = UINavigationController(rootViewController: fourVC)
-//        let item4:UITabBarItem = UITabBarItem(title: "我", image: UIImage(named: "Find_unClick2"), selectedImage: UIImage(named:"Find_onClick2"))
-//        fourVC.tabBarItem = item4
-        let fourVC = FourthViewController(nibName:"FourthViewController", bundle:nil)
+        let fourVC = ForthViewController()
         let nav4 = UINavigationController(rootViewController: fourVC)
         let item4:UITabBarItem = UITabBarItem(title: "我", image: UIImage(named: "Find_unClick2"), selectedImage: UIImage(named:"Find_onClick2"))
         fourVC.tabBarItem = item4
+        //
+        
+//        let fourVC = FourthViewController(nibName:"FourthViewController", bundle:nil)
+//        let nav4 = UINavigationController(rootViewController: fourVC)
+//        let item4:UITabBarItem = UITabBarItem(title: "我", image: UIImage(named: "Find_unClick2"), selectedImage: UIImage(named:"Find_onClick2"))
+//        fourVC.tabBarItem = item4
         
         
+//        let headView = UIView()
+//        headView.frame = CGRectMake(0, 0, self.view.frame.size.width, 40)
+//        headView.backgroundColor = UIColor.redColor()
+        
+        let rightButton1 = UIBarButtonItem(image: UIImage(named: "NearBy_unClick2"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("clickAction1"))
+        let rightButton2 = UIBarButtonItem(image: UIImage(named: "NearBy_unClick2"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("clickAction2"))
+        let buttonArray = [rightButton1,rightButton2]
+//        let items = UINavigationItem()
+//        items.rightBarButtonItems = buttonArray
+        nav4.navigationItem.rightBarButtonItems = buttonArray
+        
+        //
         let tabArray = [nav1,nav2,nav3,nav4]
         self.viewControllers = tabArray
         self.tabBar.tintColor = UIColor.greenColor()
-        
+        //
+    }
+    func qq(){
+        let headView = UIView()
+        headView.frame = CGRectMake(0, 0, self.view.frame.size.width, 40)
+        headView.backgroundColor = UIColor.redColor()
     }
     
     func createNavigationItem()->UINavigationItem{
